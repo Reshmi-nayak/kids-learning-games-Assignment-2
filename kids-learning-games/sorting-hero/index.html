@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorting Hero</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="home" class="screen active">
+  <h1>🦸 Sorting Hero</h1>
+  <button id="startBtn">Start</button>
+</div>
+
+<div id="game" class="screen">
+  <header>
+    <button id="menuBtn">⬅ Menu</button>
+    <div id="ruleText"></div>
+    <button id="resetBtn">🔄</button>
+  </header>
+
+  <div id="playArea">
+    <div id="item"></div>
+  </div>
+
+  <div id="bins">
+    <div class="bin" id="binA"></div>
+    <div class="bin" id="binB"></div>
+  </div>
+
+  <div id="feedback"></div>
+</div>
+
+<div id="win" class="screen">
+  <h1>🎉 You are a Sorting Hero!</h1>
+  <button id="restartBtn">Play Again</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

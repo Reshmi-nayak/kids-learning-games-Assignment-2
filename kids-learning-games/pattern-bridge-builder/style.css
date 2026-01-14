@@ -1,0 +1,165 @@
+/* ---------- GLOBAL ---------- */
+* {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(#7fd3ff, #e0f7fa);
+  text-align: center;
+}
+
+button {
+  min-height: 48px;
+  padding: 12px 22px;
+  border-radius: 16px;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.primary {
+  background: linear-gradient(135deg, #ffdd55, #ff9800);
+}
+
+.screen {
+  display: none;
+  padding: 20px;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---------- SCENE ---------- */
+.scene {
+  position: relative;
+  margin: 30px auto;
+  max-width: 360px;
+}
+
+/* ---------- ROBOT ---------- */
+#robot {
+  position: absolute;
+  left: -50px;
+  bottom: 26px;
+  width: 40px;
+  height: 40px;
+  background: #555;
+  border-radius: 10px;
+  transition: transform 1.5s linear;
+}
+
+.eye {
+  position: absolute;
+  top: 12px;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+}
+
+.eye.left { left: 10px; }
+.eye.right { right: 10px; }
+
+/* ---------- BRIDGE ---------- */
+#bridge {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.plank {
+  width: 50px;
+  height: 20px;
+  border-radius: 6px;
+  background: #666;
+  transition: transform 0.2s;
+}
+
+.plank.big {
+  height: 28px;
+}
+
+.plank.round {
+  border-radius: 16px;
+}
+
+.plank.missing {
+  background: repeating-linear-gradient(
+    45deg,
+    #ccc,
+    #ccc 6px,
+    #eee 6px,
+    #eee 12px
+  );
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* ---------- CHOICES ---------- */
+#choices {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.choice {
+  width: 64px;
+  height: 28px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.choice:active {
+  transform: scale(0.9);
+}
+
+/* ---------- FEEDBACK ---------- */
+#feedback {
+  min-height: 28px;
+  margin-top: 12px;
+  font-size: 1.2rem;
+}
+
+/* ---------- MODAL ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+/* ---------- CONFETTI ---------- */
+#confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}

@@ -1,0 +1,95 @@
+* { box-sizing: border-box; font-family: system-ui, sans-serif; }
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(#dff6ff, #ffffff);
+}
+
+.screen {
+  display: none;
+  height: 100vh;
+  padding: 16px;
+  text-align: center;
+}
+
+.screen.active {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  min-height: 48px;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  border: none;
+  background: #4caf50;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#ruleText {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#playArea {
+  flex: 1;
+  position: relative;
+}
+
+#item {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  background: red;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  touch-action: none;
+  transition: box-shadow 0.2s;
+}
+
+#item.dragging {
+  transform: scale(1.15);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.25);
+}
+
+#bins {
+  display: flex;
+  gap: 12px;
+}
+
+.bin {
+  flex: 1;
+  min-height: 90px;
+  border-radius: 16px;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.bin.highlight {
+  background: #ffe082;
+}
+
+#feedback {
+  position: absolute;
+  bottom: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+}

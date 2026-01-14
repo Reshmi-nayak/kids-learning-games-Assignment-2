@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audio Memory Match</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HOME SCREEN -->
+  <section id="home" class="screen active">
+    <h1>🎧 Audio Memory Match</h1>
+    <button id="startBtn" class="primary">Start</button>
+    <button id="howBtn">How to Play</button>
+  </section>
+
+  <!-- HOW TO PLAY MODAL -->
+  <div id="howModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>How to Play</h2>
+      <p>Listen carefully to the sounds.</p>
+      <p>Tap the tiles to repeat the same sound order.</p>
+      <p>The tile sounds change every round!</p>
+      <button id="closeHow">Got it!</button>
+    </div>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <section id="game" class="screen">
+    <header>
+      <button id="menuBtn">⬅ Menu</button>
+      <div id="progress">Round 1 / 10</div>
+      <button id="resetBtn">🔄 Reset</button>
+    </header>
+
+    <div id="grid" class="grid"></div>
+
+    <button id="listenAgain" class="secondary">🔁 Listen Again (1)</button>
+  </section>
+
+  <!-- WIN SCREEN -->
+  <section id="win" class="screen">
+    <h1>🎉 Great Listening!</h1>
+    <p>You completed all 10 rounds!</p>
+    <button id="backHome">Back to Menu</button>
+    <canvas id="confetti"></canvas>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

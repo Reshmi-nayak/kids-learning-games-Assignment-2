@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadow Detective</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HOME SCREEN -->
+  <div id="homeScreen" class="screen active">
+    <h1>🕵️ Shadow Detective</h1>
+    <button id="startBtn" class="primary-btn">Start</button>
+    <button id="howBtn" class="secondary-btn">How to Play</button>
+  </div>
+
+  <!-- HOW TO PLAY MODAL -->
+  <div id="howModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <h2>How to Play</h2>
+      <ol>
+        <li>Drag the colorful object</li>
+        <li>Drop it on the matching shadow</li>
+        <li>Match all to win 🎉</li>
+      </ol>
+      <button id="closeHow" class="primary-btn">Got it!</button>
+    </div>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div id="gameScreen" class="screen">
+    <header class="top-bar">
+      <button id="backBtn">⬅ Menu</button>
+      <button id="resetBtn">🔄 Reset</button>
+    </header>
+
+    <p id="hintText">Drag each object to its shadow</p>
+
+    <div id="gameArea">
+      <div id="objects" aria-label="Draggable objects"></div>
+      <div id="shadows" aria-label="Shadow targets"></div>
+    </div>
+  </div>
+
+  <!-- CONFETTI CONTAINER -->
+  <div id="confettiContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

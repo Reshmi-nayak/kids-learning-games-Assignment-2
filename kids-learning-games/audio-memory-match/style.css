@@ -1,0 +1,103 @@
+/* ---------- GLOBAL ---------- */
+* {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle, #1e1e2f, #0f0f18);
+  color: white;
+  text-align: center;
+}
+
+button {
+  min-height: 48px;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.primary {
+  background: linear-gradient(135deg, #4fc3f7, #0288d1);
+  color: #000;
+}
+
+.secondary {
+  background: linear-gradient(135deg, #81c784, #388e3c);
+}
+
+.screen {
+  display: none;
+  padding: 20px;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* ---------- GRID ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  gap: 20px;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.tile {
+  width: 120px;
+  height: 120px;
+  border-radius: 22px;
+  background: radial-gradient(circle, #3a3a5c, #1a1a2e);
+  box-shadow: inset 0 0 10px #000;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.tile.active {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #4fc3f7;
+}
+
+/* ---------- MODAL ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #222;
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 300px;
+}
+
+/* ---------- CONFETTI ---------- */
+#confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}

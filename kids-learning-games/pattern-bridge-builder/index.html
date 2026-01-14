@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pattern Bridge Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- HOME -->
+<section id="home" class="screen active">
+  <h1>🌈 Pattern Bridge Builder</h1>
+  <button id="startBtn" class="primary">Start</button>
+  <button id="howBtn">How to Play</button>
+</section>
+
+<!-- HOW TO PLAY -->
+<div id="howModal" class="modal hidden">
+  <div class="modal-content">
+    <h2>How to Play</h2>
+    <p>Look at the bridge pattern.</p>
+    <p>Choose the correct plank.</p>
+    <p>Help the robot cross!</p>
+    <button id="closeHow">Got it!</button>
+  </div>
+</div>
+
+<!-- GAME -->
+<section id="game" class="screen">
+  <header>
+    <button id="menuBtn">⬅ Menu</button>
+    <div id="levelLabel">Level 1 / 10</div>
+    <button id="resetBtn">🔄 Reset</button>
+  </header>
+
+  <div class="scene">
+    <div id="robot">
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+    </div>
+    <div id="bridge"></div>
+  </div>
+
+  <div id="choices"></div>
+  <div id="feedback"></div>
+</section>
+
+<!-- WIN -->
+<section id="win" class="screen">
+  <h1>🎉 You’re a Pattern Pro!</h1>
+  <button id="backHome">Back to Menu</button>
+  <canvas id="confetti"></canvas>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kids Learning Games</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎮 Learning Games</h1>
+<p class="subtitle">Pick a game and have fun!</p>
+
+<div class="grid">
+
+  <button class="card" data-game="shadow-detective">
+    🕵️ Shadow Detective
+  </button>
+
+  <button class="card" data-game="color-chemist">
+    🎨 Color Chemist
+  </button>
+
+  <button class="card" data-game="audio-memory-match">
+    🎧 Audio Memory Match
+  </button>
+
+  <button class="card" data-game="pattern-bridge-builder">
+    🌉 Pattern Bridge Builder
+  </button>
+
+  <button class="card" data-game="sorting-hero">
+    🦸 Sorting Hero
+  </button>
+
+</div>
+
+<div id="gameContainer" class="hidden">
+  <button id="exitBtn">⬅ Back to Menu</button>
+  <iframe id="gameFrame" title="Game Frame"></iframe>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
